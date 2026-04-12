@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw Sensor Multitool — Support</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; }
+        h1 { font-size: 1.8em; }
+        h2 { font-size: 1.3em; margin-top: 2em; }
+        h3 { font-size: 1.1em; margin-top: 1.5em; margin-bottom: 0.3em; }
+        p, li { font-size: 1em; }
+        a { color: #007AFF; }
+        .contact { background: #f0f4ff; padding: 20px; border-radius: 12px; margin-top: 2em; }
+        table { width: 100%; border-collapse: collapse; margin: 1em 0; }
+        th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e0e0e0; font-size: 0.95em; }
+        th { background: #f7f7f7; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <h1>Raw Sensor Multitool — Support</h1>
+    <p>Raw Sensor Multitool is a real-time sensor dashboard for iPhone. It displays live data from your device's accelerometer, gyroscope, magnetometer, altimeter, and compass — designed for DIY makers, engineers, and anyone curious about what their phone is measuring.</p>
+
+    <h2>Sensors</h2>
+    <table>
+        <tr><th>Sensor</th><th>What It Measures</th><th>Unit</th></tr>
+        <tr><td>Accelerometer</td><td>Linear forces along X, Y, Z axes (gravity + motion)</td><td>g</td></tr>
+        <tr><td>Gyroscope</td><td>Rotation rate around X, Y, Z axes</td><td>rad/s</td></tr>
+        <tr><td>Magnetometer</td><td>Raw magnetic field strength along X, Y, Z axes</td><td>µT</td></tr>
+        <tr><td>Altimeter</td><td>Relative altitude change since session start + barometric pressure</td><td>m / hPa</td></tr>
+        <tr><td>Compass</td><td>Magnetic and true heading, accuracy rating</td><td>degrees</td></tr>
+    </table>
+
+    <h2>Sensitivity Modes</h2>
+    <p>Use the <strong>Raw / Balanced / Smooth</strong> selector at the top of the dashboard to control how the data is filtered:</p>
+    <ul>
+        <li><strong>Raw</strong> — No filtering. Full sensor precision. Best for debugging, calibration, and DIY projects that need the most detailed data.</li>
+        <li><strong>Balanced</strong> — Light smoothing with reduced decimal places. Good general-purpose mode (default).</li>
+        <li><strong>Smooth</strong> — Heavy moving-average filter. Reduces noise significantly. Best for steady observation and general use.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Why is the gyroscope showing all zeros when my phone isn't moving?</h3>
+    <p>That's correct. The gyroscope measures <em>rotation rate</em> — how fast the phone is spinning — not orientation or tilt. When the phone is stationary, the rotation rate is zero regardless of how it's positioned. Use the Accelerometer card to see the phone's orientation relative to gravity.</p>
+
+    <h3>Why does the magnetometer change constantly even when my phone is still?</h3>
+    <p>The raw magnetometer is very sensitive and picks up environmental interference from nearby electronics, power sources, and even the Earth's magnetic field variations. Try switching to <strong>Smooth</strong> mode for steadier readings, or move away from electronics and metal objects for a more stable baseline.</p>
+
+    <h3>Why does the altimeter show relative altitude, not my actual elevation?</h3>
+    <p>The altimeter uses the barometric pressure sensor to calculate <em>changes</em> in altitude from when the app session started. It is not GPS-based and cannot report your absolute elevation above sea level. Tap <strong>Reset Baseline</strong> to zero the altitude reading at any time.</p>
+
+    <h3>Why does the compass ask for location permission?</h3>
+    <p>iOS requires location permission to calculate <em>true north</em> (which accounts for magnetic declination at your location). Magnetic heading works without permission. If you deny location access, only magnetic heading will be shown.</p>
+
+    <h3>What does "Calibrating…" mean on the compass?</h3>
+    <p>The compass needs to be calibrated before it can report accurate headings. When you see "Calibrating…", slowly rotate your phone in a figure-eight pattern until the accuracy indicator turns green.</p>
+
+    <h3>Are any sensors unavailable on older iPhones?</h3>
+    <p>All five sensors are available on iPhone 6 and later. The barometric altimeter was introduced on the iPhone 6. If a sensor is unavailable on your device, its card will display an "unavailable" notice.</p>
+
+    <h3>Does the app work in the background?</h3>
+    <p>Sensors automatically pause when you leave the app to save battery, and resume when you return.</p>
+
+    <div class="contact">
+        <h2 style="margin-top: 0;">Contact Us</h2>
+        <p>Have a question or found a bug? Email us at:<br>
+        <strong><a href="mailto:andy.x.meyers@gmail.com">andy.x.meyers@gmail.com</a></strong></p>
+    </div>
+
+    <p style="margin-top: 2em;"><a href="privacy-policy.html">Privacy Policy</a></p>
+</body>
+</html>
